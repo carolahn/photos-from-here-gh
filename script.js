@@ -81,11 +81,19 @@ function showImage (searchURL) {
 }
 
 
+
+
 function skipImage (event) {
     var btn = event.target.id;
     console.log(btn);
+
     if (btn === "btnRight" && photoIndex < data.photos.photo.length - 1) {
         photoIndex++;
+        imageUrl = constructImageURL(data.photos.photo[photoIndex]);
+        console.log(imageUrl);
+        myImage.src = imageUrl;
+    } else if (btn === "btnRight" && photoIndex === data.photos.photo.length - 1) {
+        photoIndex = 0;
         imageUrl = constructImageURL(data.photos.photo[photoIndex]);
         console.log(imageUrl);
         myImage.src = imageUrl;
@@ -94,10 +102,33 @@ function skipImage (event) {
         imageUrl = constructImageURL(data.photos.photo[photoIndex]);
         console.log(imageUrl);
         myImage.src = imageUrl;
+    } else if (btn === "btnLeft" && photoIndex === 0) {
+        photoIndex = data.photos.photo.length - 1;
+        imageUrl = constructImageURL(data.photos.photo[photoIndex]);
+        console.log(imageUrl);
+        myImage.src = imageUrl;
     } else {
         return;
     }
 }
+
+// function skipImage (event) {
+//     var btn = event.target.id;
+//     console.log(btn);
+//     if (btn === "btnRight" && photoIndex < data.photos.photo.length - 1) {
+//         photoIndex++;
+//         imageUrl = constructImageURL(data.photos.photo[photoIndex]);
+//         console.log(imageUrl);
+//         myImage.src = imageUrl;
+//     } else if (btn === "btnLeft" && photoIndex > 0) {
+//         photoIndex--;
+//         imageUrl = constructImageURL(data.photos.photo[photoIndex]);
+//         console.log(imageUrl);
+//         myImage.src = imageUrl;
+//     } else {
+//         return;
+//     }
+// }
 
 
 
