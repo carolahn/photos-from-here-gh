@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+/* font-family: 'Sigmar One', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* font-family: 'Rubik', sans-serif; */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    background-color: #8e79ae;
+}
+#main {
+    margin: 2vw auto;
+    width: 75vw;
+    border: 2px solid #666666;
+    box-shadow: 4px 4px 4px #000000;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+header {
+    font-family: 'Sigmar One', cursive;
+    font-size: 3.2vw;
+    color: #953255;
+    padding-top: 3vw;
+}
+h1 {
+    text-align: center;
+    background: url(_images/icon-camera.png) no-repeat 2% center, url(_images/icon-spot.png) no-repeat 98% center;
+    background-size: 8vw 8vw;
+}
+
+
+
+section {
+    font-family: 'Rubik', sans-serif;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#sideBox {
+    width: 22vw;
+}
+
+#mainBox {
+    position: relative;
+}
+#photoContainer {
+    width: 50vw;
+    height: 50vw;
+    background-color: black;
+    overflow: hidden;
+    position: absolute;
+    
+}
+img {
+    height: 40vw;
+}
+#btnSkip {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    height: 50vw;
+    
+}
+.btn {
+    width: 25vw;
+    height: 50vw;
+    position: absolute;
+    
+}
+#btnRight{
+    right: 0;
+    top: 0;
+}
+#btnRight:hover{
+    background: url(_images/arrow-right.png) no-repeat 2% center;
+    background-size: 8vw 8vw;
+}
+#btnLeft{
+    left: 0;
+    top: 0;
+}
+#btnLeft:hover {
+    background: url(_images/arrow-left.png) no-repeat 30px center;
+    background-size: 8vw 8vw;
+}
+
+
+
+#leftMsg {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 20vw;
+    text-align: center;
+    background: url(_images/post1.png) no-repeat 14% center;
+    background-size: 20vw 20vw;
+}
+
+
+
+footer {
+    color: #666666;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2vw;
+}
+footer a {
+    text-decoration: none;
+    color: #666666;
+}
