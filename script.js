@@ -43,16 +43,20 @@ var photoIndex = 0;
 
 var imageUrl = "";
 
+const subtitle = document.getElementById('subtitle');
+var subText= "";
 
-
-
+var clickAudio = new Audio('_audio/click.wav');
 
 function getWord () {
     const searchWord = document.getElementById('searchWord');
-    let word = searchWord.value;
-    console.log(word)
+    let word = searchWord.value.trim().toLowerCase();
+    console.log(word);
+    subText =`<p id="titulo">${word}</p> <p id="local">lat:${coordinates.latitude.toFixed(4)} &nbsp &nbsp long:${coordinates.longitude.toFixed(4)}</p>`;
+    subtitle.innerHTML = subText;
     searchURL = constructSearchURL (coordinates.latitude, coordinates.longitude, word);
     showImage (searchURL);
+    
 }
 
 function constructSearchURL (lat, long, word) {
@@ -73,11 +77,13 @@ function showImage (searchURL) {
         imageUrl = constructImageURL(data.photos.photo[0]);
         console.log(imageUrl);
         myImage.src = imageUrl;
+        clickAudio.play();
 
         btnSkip.addEventListener('click', skipImage);
 
         return data;
-    });
+    })
+    .catch(err => {console.error(err.message)});
 }
 
 
@@ -97,6 +103,7 @@ function skipImage (event) {
         imageUrl = constructImageURL(data.photos.photo[photoIndex]);
         console.log(imageUrl);
         myImage.src = imageUrl;
+        clickAudio.play();
     } else if (btn === "btnLeft" && photoIndex > 0) {
         photoIndex--;
         imageUrl = constructImageURL(data.photos.photo[photoIndex]);
@@ -107,6 +114,7 @@ function skipImage (event) {
         imageUrl = constructImageURL(data.photos.photo[photoIndex]);
         console.log(imageUrl);
         myImage.src = imageUrl;
+        clickAudio.play();
     } else {
         return;
     }
@@ -150,7 +158,8 @@ function main() {
     // inicia com imagens das praias de João Pessoa, Paraíba
     searchURL =  "https://shrouded-mountain-15003.herokuapp.com/https://flickr.com/services/rest/?api_key=e1b93107b916d11d423cc76107600b2e&format=json&nojsoncallback=1&method=flickr.photos.search&safe_search=1&per_page=5&lat=-7.11532&lon=-34.861&text=praia";
     showImage (searchURL);
-
+    subText =`<p id="titulo">praias</p> <p id="local">lat:-7.1153 &nbsp &nbsp long:-34.8610</p>`;
+    subtitle.innerHTML = subText;
     navigator.geolocation.getCurrentPosition(sucess, error, options);
 
     const button = document.getElementById('btnSearch');
