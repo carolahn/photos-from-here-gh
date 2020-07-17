@@ -25,6 +25,8 @@ body {
     background-color: #ffffff;
 }
 
+
+
 header {
     font-family: 'Sigmar One', cursive;
     font-size: 3.2vw;
@@ -96,6 +98,8 @@ section {
     font-size: 2.2vw;
 }
 
+
+
 #mainBox {
     position: relative;
 }
@@ -113,6 +117,20 @@ section {
 img {
     height: 40vw;
 }
+.blink {
+    animation: blink normal 0.1s infinite ease-in-out; 
+}
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
 #subtitle {
     height: 10vw;
     width: 50vw;
@@ -123,15 +141,14 @@ img {
     font-family: 'Dancing Script', cursive;
     padding-top: 1.3vw;
 }
- #titulo {
+#titulo {
     text-align: center;
     font-size: 3vw;
- }
-
- #local {
+}
+#local {
     text-align: center;
     font-size: 2vw;
- }
+}
 
 
 #btnSkip {
@@ -145,7 +162,6 @@ img {
     width: 25vw;
     height: 50vw;
     position: absolute;
-    
 }
 #btnRight{
     right: 0;
@@ -153,7 +169,6 @@ img {
 }
 #btnRight:hover{
     background: url(_images/arrow-right.png) no-repeat 16vw center;
-    /* background-position: auto 0; */
     background-size: 8vw 8vw;
 }
 #btnLeft{
@@ -164,10 +179,6 @@ img {
     background: url(_images/arrow-left.png) no-repeat 1vw center;
     background-size: 8vw 8vw;
 }
-
-
-
-
 
 
 
