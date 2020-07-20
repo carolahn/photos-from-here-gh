@@ -48,7 +48,7 @@ var imageUrl = "";
 const subtitle = document.getElementById('subtitle');
 var subText= "";
 
-var clickAudio = new Audio('_audio/click.wav');
+var clickAudio = new Audio('audio/click.wav');
 
 
 

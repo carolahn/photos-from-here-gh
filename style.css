@@ -32,12 +32,12 @@ header {
     font-size: 3.2vw;
     color: #953255;
     padding-top: 3vw;
-    background: url(_images/header-bg.png);
+    background: url(images/header-bg.png);
     background-size: 73vw auto;
 }
 h1 {
     text-align: center;
-    background: url(_images/icon-camera.png) no-repeat 2% center, url(_images/icon-spot.png) no-repeat 98% center;
+    background: url(images/icon-camera.png) no-repeat 2% center, url(images/icon-spot.png) no-repeat 98% center;
     background-size: 8vw 8vw;
 }
 
@@ -61,7 +61,7 @@ section {
     height: 20vw;
     text-align: center;
     font-size: 2vw;
-    background: url(_images/post1.png) no-repeat 14% center;
+    background: url(images/post1.png) no-repeat 14% center;
     background-size: 20vw 20vw;
     padding: 2vw;
 }
@@ -72,7 +72,7 @@ section {
     height: 20vw;
     text-align: center;
     font-size: 2vw;
-    background: url(_images/post2.png) no-repeat 14% center;
+    background: url(images/post2.png) no-repeat 14% center;
     background-size: 16vw 16vw;
     margin-left: 2vw;
     padding: 5vw 5vw 0vw 2vw;
@@ -168,7 +168,7 @@ img {
     top: 0;
 }
 #btnRight:hover{
-    background: url(_images/arrow-right.png) no-repeat 16vw center;
+    background: url(images/arrow-right.png) no-repeat 16vw center;
     background-size: 8vw 8vw;
 }
 #btnLeft{
@@ -176,7 +176,7 @@ img {
     top: 0;
 }
 #btnLeft:hover {
-    background: url(_images/arrow-left.png) no-repeat 1vw center;
+    background: url(images/arrow-left.png) no-repeat 1vw center;
     background-size: 8vw 8vw;
 }
 
