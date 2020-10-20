@@ -1,5 +1,9 @@
 # photos-from-here-gh
 ## fotos-daqui
+
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/carolina-ahn/)](https://www.linkedin.com/in/carolina-ahn/)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:ahncarolina@gmail.com)](mailto:ahncarolina@gmail.com)
+
 ## [LINK](https://carolahn.github.io/photos-from-here-gh/)
 
 #### About this repository:
